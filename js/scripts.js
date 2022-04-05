@@ -1,11 +1,14 @@
 $(document).ready(function() {
   $("#formOne").submit(function(event) {
     event.preventDefault();
+    const nameInput = $("input#name").val();
+    const dobInput = $("#born").val();
+    const musicInput = $("input:radio[name=music]:checked").val();
+    
+    $(".name").text(nameInput);
+    $("#dob").text(dobInput);
+    $("#music").text(musicInput);
 
-const beverage = $("#beverage").val();
-
-const dob = $("#born").val();
-
-const favoriteColor = $("#color").val();
-});
+    $("#story").show();
+  });
 });
